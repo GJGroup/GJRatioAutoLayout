@@ -22,11 +22,29 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="aLRatio" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GJRatioAutoLayout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3b-1A-qWM">
+                    <rect key="frame" x="39" y="240" width="146.5" height="20.5"/>
+                    <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMW-UO-qDM">
+                    <rect key="frame" x="226" y="236" width="39" height="27.5"/>
+                    <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="d3b-1A-qWM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="39" id="1U2-Vw-2bs"/>
+                <constraint firstItem="LMW-UO-qDM" firstAttribute="centerY" secondItem="d3b-1A-qWM" secondAttribute="centerY" id="CFQ-Px-Hzy"/>
                 <constraint firstItem="YKP-DN-R9P" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="UR9-Jy-qEZ"/>
                 <constraint firstItem="YKP-DN-R9P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="fcb-Gb-6xQ"/>
+                <constraint firstItem="d3b-1A-qWM" firstAttribute="top" secondItem="YKP-DN-R9P" secondAttribute="bottom" constant="24" id="lO2-5Y-HjO"/>
+                <constraint firstItem="LMW-UO-qDM" firstAttribute="leading" secondItem="d3b-1A-qWM" secondAttribute="trailing" constant="40" id="tw4-9r-o02"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

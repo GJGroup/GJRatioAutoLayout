@@ -16,15 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *a = @"2";
-    
-    BOOL b = a.boolValue;
     
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    self.label.fontRatio = !self.label.fontRatio;
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
