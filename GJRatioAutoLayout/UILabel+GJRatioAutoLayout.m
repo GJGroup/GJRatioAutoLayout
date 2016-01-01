@@ -49,22 +49,17 @@
 - (void)setFontRatio:(BOOL)fontRatio
 {
     if (self.gj_fontRatio == fontRatio) return;
-
     self.gj_fontRatio = fontRatio;
-    
-    if (self.gj_fontRatio || self.gj_aLRatio) {
-        self.gj_originalFontSize = self.font.pointSize;
-        CGFloat size = floorl(self.font.pointSize * GJ_Scale);
-        NSString *name = self.font.fontName;
-        self.font = [UIFont fontWithName:name size:size];
-    }
-    else {
-        self.font = [UIFont fontWithName:self.font.fontName size:self.gj_originalFontSize];
-    }
+    [self resetFont];
 }
 
 - (void)setALRatio:(BOOL)aLRatio {
     [super setALRatio:aLRatio];
+    [self resetFont];
+}
+
+- (void)resetFont {
+    
     if (self.gj_aLRatio || self.gj_fontRatio) {
         self.gj_originalFontSize = self.font.pointSize;
         CGFloat size = floorl(self.font.pointSize * GJ_Scale);
