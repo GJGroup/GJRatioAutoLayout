@@ -7,6 +7,7 @@
 //
 
 #import "UILabel+GJRatioAutoLayout.h"
+#import "UIView+GJRatioAutoLayout.h"
 #import "GJRatioAutoLaoutDefine.h"
 #import <objc/runtime.h>
 
@@ -43,9 +44,17 @@
 {
     objc_setAssociatedObject(self, @selector(gj_fontRatio), @(fontRatio), OBJC_ASSOCIATION_RETAIN);
     
-    if (fontRatio) {
+}
+
+- (void)setFontRatio:(BOOL)fontRatio
+{
+    if (self.gj_fontRatio == fontRatio) return;
+
+    self.gj_fontRatio = fontRatio;
+    
+    if (self.gj_fontRatio || self.gj_aLRatio) {
         self.gj_originalFontSize = self.font.pointSize;
-        CGFloat size = self.font.pointSize * GJ_Scale;
+        CGFloat size = floorl(self.font.pointSize * GJ_Scale);
         NSString *name = self.font.fontName;
         self.font = [UIFont fontWithName:name size:size];
     }
@@ -54,11 +63,17 @@
     }
 }
 
-- (void)setFontRatio:(BOOL)fontRatio
-{
-    if (self.gj_fontRatio == fontRatio) return;
-
-    self.gj_fontRatio = fontRatio;
+- (void)setALRatio:(BOOL)aLRatio {
+    [super setALRatio:aLRatio];
+    if (self.gj_aLRatio || self.gj_fontRatio) {
+        self.gj_originalFontSize = self.font.pointSize;
+        CGFloat size = floorl(self.font.pointSize * GJ_Scale);
+        NSString *name = self.font.fontName;
+        self.font = [UIFont fontWithName:name size:size];
+    }
+    else {
+        self.font = [UIFont fontWithName:self.font.fontName size:self.gj_originalFontSize];
+    }
 }
 
 @end
