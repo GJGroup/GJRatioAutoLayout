@@ -35,6 +35,10 @@
 
 @implementation UILabel (GJRatioAutoLayout)
 
++ (void)load {
+//    GJExchangeImplementations(self, @selector(setFont:), @selector(gj_setFont:));
+}
+
 - (BOOL)gj_fontRatio
 {
     return [objc_getAssociatedObject(self, _cmd) boolValue];
@@ -57,6 +61,15 @@
     [super setALRatio:aLRatio];
     [self resetFont];
 }
+
+//- (void)gj_setFont:(UIFont *)font {
+//    if (self.gj_aLRatio || self.gj_fontRatio) {
+//        self.gj_originalFontSize = self.font.pointSize;
+//        CGFloat size = floorl(self.font.pointSize * GJ_Scale);
+//        NSString *name = self.font.fontName;
+//       [self gj_setFont:[UIFont fontWithName:name size:size]];
+//    }
+//}
 
 - (void)resetFont {
     

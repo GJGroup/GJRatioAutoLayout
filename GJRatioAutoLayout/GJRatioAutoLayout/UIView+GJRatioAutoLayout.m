@@ -10,7 +10,7 @@
 #import "GJRatioAutoLaoutDefine.h"
 #import <objc/runtime.h>
 
-static void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelector) {
+void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelector) {
     Method oldMethod = class_getInstanceMethod(class, newSelector);
     Method newMethod = class_getInstanceMethod(class, oldSelector);
     method_exchangeImplementations(oldMethod, newMethod);
@@ -80,7 +80,8 @@ static void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelec
 
 - (void)gj_AddConstraint:(NSLayoutConstraint *)constraint {
     
-    if ([constraint isMemberOfClass:[NSLayoutConstraint class]]) {
+    if ([constraint isMemberOfClass:[NSLayoutConstraint class]] ||
+        [constraint isMemberOfClass:NSClassFromString(@"MASLayoutConstraint")]) {
         
         UIView *firstItem = constraint.firstItem;
         UIView *secendItem = constraint.secondItem;
@@ -101,7 +102,8 @@ static void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelec
             [secendItem.gj_constraints addObject:constraint];
         }
     }
-    else if ([constraint isMemberOfClass:NSClassFromString(@"NSContentSizeLayoutConstraint")]) {
+    else if ([constraint isMemberOfClass:NSClassFromString(@"NSContentSizeLayoutConstraint")] &&
+             ![self isKindOfClass:[UILabel class]]) {
         UIView *firstItem = constraint.firstItem;
         if (firstItem.gj_aLRatio) {
             if (!constraint.gj_isRatio) {

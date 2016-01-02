@@ -8,6 +8,10 @@
 
 #import "MainViewController.h"
 #import "UILabel+GJRatioAutoLayout.h"
+#import "UIView+GJRatioAutoLayout.h"
+#import "GJRatioAutoLaoutDefine.h"
+#import <Masonry.h>
+
 @interface MainViewController ()
 @property (nonatomic, weak) IBOutlet UILabel *label;
 @end
@@ -16,6 +20,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIImageView *codeImageView = [[UIImageView alloc]initWithFrame:CGRectMake(10 * GJ_Scale, 123 *GJ_Scale, 129 *GJ_Scale, 103 *GJ_Scale)];
+    codeImageView.image = [UIImage imageNamed:@"icon"];
+    codeImageView.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:codeImageView];
+    [codeImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.equalTo(self.view).insets(UIEdgeInsetsMake(129, 10, 0, 0));
+    }];
+    codeImageView.aLRatio = YES;
+    
+    
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
 }
 

@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4210144C1C36E3B400ED3D2D /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 4210144B1C36E3B400ED3D2D /* 10.png */; };
+		1FD84343E85BFA4B0DC01748 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9A4CAEB0FAD3AD182D30E9 /* libPods.a */; };
+		4210144C1C36E3B400ED3D2D /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4210144B1C36E3B400ED3D2D /* icon@2x.png */; };
+		4210144E1C38508700ED3D2D /* icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4210144D1C38508700ED3D2D /* icon@3x.png */; };
+		421014551C38536900ED3D2D /* UILabel+GJRatioAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 421014521C38536900ED3D2D /* UILabel+GJRatioAutoLayout.m */; };
+		421014561C38536900ED3D2D /* UIView+GJRatioAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 421014541C38536900ED3D2D /* UIView+GJRatioAutoLayout.m */; };
 		42FF3E411C33775600045F36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FF3E401C33775600045F36 /* main.m */; };
 		42FF3E441C33775600045F36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FF3E431C33775600045F36 /* AppDelegate.m */; };
 		42FF3E4C1C33775600045F36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42FF3E4B1C33775600045F36 /* Assets.xcassets */; };
 		42FF3E4F1C33775600045F36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FF3E4D1C33775600045F36 /* LaunchScreen.storyboard */; };
 		42FF3E591C33777400045F36 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FF3E571C33777400045F36 /* MainViewController.m */; };
 		42FF3E5A1C33777400045F36 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42FF3E581C33777400045F36 /* MainViewController.xib */; };
-		42FF3E5D1C3377DA00045F36 /* UIView+GJRatioAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FF3E5C1C3377DA00045F36 /* UIView+GJRatioAutoLayout.m */; };
-		42FF3E631C33780E00045F36 /* UILabel+GJRatioAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FF3E621C33780E00045F36 /* UILabel+GJRatioAutoLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4210144B1C36E3B400ED3D2D /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
+		4210144B1C36E3B400ED3D2D /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		4210144D1C38508700ED3D2D /* icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@3x.png"; sourceTree = "<group>"; };
+		421014501C38536900ED3D2D /* GJRatioAutoLaoutDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJRatioAutoLaoutDefine.h; sourceTree = "<group>"; };
+		421014511C38536900ED3D2D /* UILabel+GJRatioAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+GJRatioAutoLayout.h"; sourceTree = "<group>"; };
+		421014521C38536900ED3D2D /* UILabel+GJRatioAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+GJRatioAutoLayout.m"; sourceTree = "<group>"; };
+		421014531C38536900ED3D2D /* UIView+GJRatioAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GJRatioAutoLayout.h"; sourceTree = "<group>"; };
+		421014541C38536900ED3D2D /* UIView+GJRatioAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GJRatioAutoLayout.m"; sourceTree = "<group>"; };
 		42FF3E3C1C33775600045F36 /* GJRatioAutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GJRatioAutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FF3E401C33775600045F36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		42FF3E421C33775600045F36 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -30,11 +38,9 @@
 		42FF3E561C33777400045F36 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		42FF3E571C33777400045F36 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		42FF3E581C33777400045F36 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		42FF3E5B1C3377DA00045F36 /* UIView+GJRatioAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GJRatioAutoLayout.h"; sourceTree = "<group>"; };
-		42FF3E5C1C3377DA00045F36 /* UIView+GJRatioAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GJRatioAutoLayout.m"; sourceTree = "<group>"; };
-		42FF3E611C33780E00045F36 /* UILabel+GJRatioAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+GJRatioAutoLayout.h"; sourceTree = "<group>"; };
-		42FF3E621C33780E00045F36 /* UILabel+GJRatioAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+GJRatioAutoLayout.m"; sourceTree = "<group>"; };
-		42FF3E641C3385BC00045F36 /* GJRatioAutoLaoutDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GJRatioAutoLaoutDefine.h; sourceTree = "<group>"; };
+		6C9A4CAEB0FAD3AD182D30E9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		72F3E18C7A39361B6B7BF01C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		96CD80BDBD7D159E919DA01C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,17 +48,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FD84343E85BFA4B0DC01748 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C3BC1AABA387654525E7B02 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72F3E18C7A39361B6B7BF01C /* Pods.debug.xcconfig */,
+				96CD80BDBD7D159E919DA01C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4210144F1C38536900ED3D2D /* GJRatioAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				421014501C38536900ED3D2D /* GJRatioAutoLaoutDefine.h */,
+				421014511C38536900ED3D2D /* UILabel+GJRatioAutoLayout.h */,
+				421014521C38536900ED3D2D /* UILabel+GJRatioAutoLayout.m */,
+				421014531C38536900ED3D2D /* UIView+GJRatioAutoLayout.h */,
+				421014541C38536900ED3D2D /* UIView+GJRatioAutoLayout.m */,
+			);
+			path = GJRatioAutoLayout;
+			sourceTree = "<group>";
+		};
 		42FF3E331C33775600045F36 = {
 			isa = PBXGroup;
 			children = (
 				42FF3E3E1C33775600045F36 /* GJRatioAutoLayout */,
 				42FF3E3D1C33775600045F36 /* Products */,
+				0C3BC1AABA387654525E7B02 /* Pods */,
+				BDCE800C83BDA0327D534068 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,17 +97,14 @@
 		42FF3E3E1C33775600045F36 /* GJRatioAutoLayout */ = {
 			isa = PBXGroup;
 			children = (
+				4210144F1C38536900ED3D2D /* GJRatioAutoLayout */,
 				42FF3E421C33775600045F36 /* AppDelegate.h */,
 				42FF3E431C33775600045F36 /* AppDelegate.m */,
-				42FF3E641C3385BC00045F36 /* GJRatioAutoLaoutDefine.h */,
-				42FF3E5B1C3377DA00045F36 /* UIView+GJRatioAutoLayout.h */,
-				42FF3E5C1C3377DA00045F36 /* UIView+GJRatioAutoLayout.m */,
-				42FF3E611C33780E00045F36 /* UILabel+GJRatioAutoLayout.h */,
-				42FF3E621C33780E00045F36 /* UILabel+GJRatioAutoLayout.m */,
 				42FF3E561C33777400045F36 /* MainViewController.h */,
 				42FF3E571C33777400045F36 /* MainViewController.m */,
 				42FF3E581C33777400045F36 /* MainViewController.xib */,
-				4210144B1C36E3B400ED3D2D /* 10.png */,
+				4210144B1C36E3B400ED3D2D /* icon@2x.png */,
+				4210144D1C38508700ED3D2D /* icon@3x.png */,
 				42FF3E4B1C33775600045F36 /* Assets.xcassets */,
 				42FF3E4D1C33775600045F36 /* LaunchScreen.storyboard */,
 				42FF3E501C33775600045F36 /* Info.plist */,
@@ -94,6 +121,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BDCE800C83BDA0327D534068 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C9A4CAEB0FAD3AD182D30E9 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,9 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42FF3E531C33775600045F36 /* Build configuration list for PBXNativeTarget "GJRatioAutoLayout" */;
 			buildPhases = (
+				0AA63926D33BF331DFD60708 /* Check Pods Manifest.lock */,
 				42FF3E381C33775600045F36 /* Sources */,
 				42FF3E391C33775600045F36 /* Frameworks */,
 				42FF3E3A1C33775600045F36 /* Resources */,
+				CB481464DFCFF34739EC0416 /* Embed Pods Frameworks */,
+				72529E27D1A025034576AE76 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -153,22 +191,71 @@
 			files = (
 				42FF3E4F1C33775600045F36 /* LaunchScreen.storyboard in Resources */,
 				42FF3E5A1C33777400045F36 /* MainViewController.xib in Resources */,
-				4210144C1C36E3B400ED3D2D /* 10.png in Resources */,
+				4210144E1C38508700ED3D2D /* icon@3x.png in Resources */,
+				4210144C1C36E3B400ED3D2D /* icon@2x.png in Resources */,
 				42FF3E4C1C33775600045F36 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0AA63926D33BF331DFD60708 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		72529E27D1A025034576AE76 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB481464DFCFF34739EC0416 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		42FF3E381C33775600045F36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42FF3E5D1C3377DA00045F36 /* UIView+GJRatioAutoLayout.m in Sources */,
-				42FF3E631C33780E00045F36 /* UILabel+GJRatioAutoLayout.m in Sources */,
+				421014561C38536900ED3D2D /* UIView+GJRatioAutoLayout.m in Sources */,
 				42FF3E441C33775600045F36 /* AppDelegate.m in Sources */,
 				42FF3E591C33777400045F36 /* MainViewController.m in Sources */,
+				421014551C38536900ED3D2D /* UILabel+GJRatioAutoLayout.m in Sources */,
 				42FF3E411C33775600045F36 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +356,7 @@
 		};
 		42FF3E541C33775600045F36 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72F3E18C7A39361B6B7BF01C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GJRatioAutoLayout/Info.plist;
@@ -280,6 +368,7 @@
 		};
 		42FF3E551C33775600045F36 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96CD80BDBD7D159E919DA01C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GJRatioAutoLayout/Info.plist;

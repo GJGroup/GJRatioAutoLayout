@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelector);
+
 @interface UIView (GJRatioAutoLayout)
 
 @property (nonatomic, assign, getter=gj_aLRatio) IBInspectable BOOL aLRatio;
