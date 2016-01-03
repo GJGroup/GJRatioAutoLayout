@@ -15,6 +15,7 @@
 		421014591C38EC6C00ED3D2D /* GJRatioAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 421014581C38EC6C00ED3D2D /* GJRatioAutoLayout.m */; };
 		4210145E1C39199E00ED3D2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4210145C1C39199E00ED3D2D /* Main.storyboard */; };
 		421014621C39223400ED3D2D /* GJMasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421014611C39223400ED3D2D /* GJMasonryViewController.m */; };
+		4261A9A31C3929710017CBD3 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4261A9A21C3929710017CBD3 /* README.md */; };
 		42FF3E411C33775600045F36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FF3E401C33775600045F36 /* main.m */; };
 		42FF3E441C33775600045F36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FF3E431C33775600045F36 /* AppDelegate.m */; };
 		42FF3E4C1C33775600045F36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42FF3E4B1C33775600045F36 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		4210145D1C39199E00ED3D2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		421014601C39223400ED3D2D /* GJMasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GJMasonryViewController.h; path = Demo/GJMasonryViewController.h; sourceTree = "<group>"; };
 		421014611C39223400ED3D2D /* GJMasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GJMasonryViewController.m; path = Demo/GJMasonryViewController.m; sourceTree = "<group>"; };
+		4261A9A21C3929710017CBD3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		42FF3E3C1C33775600045F36 /* GJRatioAutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GJRatioAutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FF3E401C33775600045F36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		42FF3E421C33775600045F36 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		42FF3E3E1C33775600045F36 /* GJRatioAutoLayout */ = {
 			isa = PBXGroup;
 			children = (
+				4261A9A21C3929710017CBD3 /* README.md */,
 				4210144F1C38536900ED3D2D /* GJRatioAutoLayout */,
 				4210145F1C391A9800ED3D2D /* Demo */,
 				42FF3E421C33775600045F36 /* AppDelegate.h */,
@@ -268,6 +271,7 @@
 				421014561C38536900ED3D2D /* UIView+GJRatioAutoLayout.m in Sources */,
 				42FF3E441C33775600045F36 /* AppDelegate.m in Sources */,
 				421014621C39223400ED3D2D /* GJMasonryViewController.m in Sources */,
+				4261A9A31C3929710017CBD3 /* README.md in Sources */,
 				421014551C38536900ED3D2D /* UILabel+GJRatioAutoLayout.m in Sources */,
 				42FF3E411C33775600045F36 /* main.m in Sources */,
 				421014591C38EC6C00ED3D2D /* GJRatioAutoLayout.m in Sources */,

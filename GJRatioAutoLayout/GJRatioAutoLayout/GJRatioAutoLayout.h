@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "GJRatioAutoLayoutDefine.h"
+#import "UIView+GJRatioAutoLayout.h"
+#import "UILabel+GJRatioAutoLayout.h"
 
 typedef NS_ENUM(NSUInteger, GJScreenSizeType) {
     GJScreenSizeTypeiPhone4or5,
