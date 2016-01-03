@@ -5,7 +5,7 @@ A scaled Autolayout framework by screen ratio.
 
 此库由宜信·宜人贷-宜人贷理财GJ开源小组进行开发。
 
-（英文过于low，请见谅）
+（作者英文过于low，请见谅）
 
 ## Start
 
