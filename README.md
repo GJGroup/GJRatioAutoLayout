@@ -1,5 +1,7 @@
 # GJRatioAutoLayout
-A scaled Autolayout framework by screen ratio.（一个根据屏幕比率进行缩放的AutoLayout库）
+A scaled Autolayout framework by screen ratio.
+
+一个根据屏幕比率进行缩放的AutoLayout库，iOS程序员经常会被UI虐待，要么是UI太水，不会根据iOS适配规则进行UI设计，要么是真的需要一些地方采用UI根据屏幕进行等比缩放，但程序员们大都中了Autolayout的毒，很难打破重新使用frame的心理障碍，痛不欲生；根据这种情况，我们开发了在Autolayout下，只需一个开关，即可让当前view进行等比缩放，不必放弃Autolayout，又完成了UI缩放任务。
 
 ## Start
 
