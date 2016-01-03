@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [GJRatioAutoLayout startWithScreenSizeType:GJScreenSizeTypeiPhone4Or5];
+    [GJRatioAutoLayout startWithScreenSizeType:GJScreenSizeTypeiPhone4or5];
 
     return YES;
 }

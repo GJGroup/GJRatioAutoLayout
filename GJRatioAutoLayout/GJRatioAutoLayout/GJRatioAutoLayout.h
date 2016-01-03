@@ -10,7 +10,7 @@
 #import "GJRatioAutoLayoutDefine.h"
 
 typedef NS_ENUM(NSUInteger, GJScreenSizeType) {
-    GJScreenSizeTypeiPhone4Or5,
+    GJScreenSizeTypeiPhone4or5,
     GJScreenSizeTypeiPhone6,
     GJScreenSizeTypeiPhone6Plus,
 };

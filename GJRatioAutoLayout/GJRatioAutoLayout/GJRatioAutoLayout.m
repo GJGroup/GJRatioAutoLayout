@@ -8,7 +8,7 @@
 
 #import "GJRatioAutoLayout.h"
 
-static GJScreenSizeType screenSizeType = GJScreenSizeTypeiPhone4Or5;
+static GJScreenSizeType screenSizeType = GJScreenSizeTypeiPhone4or5;
 
 @implementation GJRatioAutoLayout
 
@@ -22,7 +22,7 @@ static GJScreenSizeType screenSizeType = GJScreenSizeTypeiPhone4Or5;
 
 + (NSInteger)getScreenSizeWidth {
     switch (screenSizeType) {
-        case GJScreenSizeTypeiPhone4Or5:
+        case GJScreenSizeTypeiPhone4or5:
             return 320;
             break;
         case GJScreenSizeTypeiPhone6:
