@@ -7,7 +7,7 @@
 //
 
 #import "UIView+GJRatioAutoLayout.h"
-#import "GJRatioAutoLaoutDefine.h"
+#import "GJRatioAutoLayoutDefine.h"
 #import <objc/runtime.h>
 
 void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelector) {
@@ -20,6 +20,9 @@ void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelector) {
 
 @interface NSLayoutConstraint (_GJRatioAutoLayout)
 
+/**
+ *  gj_isRatio mark the constant is origin or scaled, and set constant.
+ */
 @property (nonatomic, assign) BOOL gj_isRatio;
 
 @end
@@ -27,6 +30,10 @@ void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelector) {
 @implementation NSLayoutConstraint (_GJRatioAutoLayout)
 
 - (void)setGj_isRatio:(BOOL)gj_isRatio {
+    if (self.gj_isRatio == gj_isRatio) return;
+    if (gj_isRatio) {
+        self.constant *= GJ_Scale;
+    }
     objc_setAssociatedObject(self, @selector(gj_isRatio), @(gj_isRatio), OBJC_ASSOCIATION_RETAIN);
 }
 
@@ -45,7 +52,6 @@ void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelector) {
     GJExchangeImplementations(self, @selector(addConstraint:), @selector(gj_AddConstraint:));
 }
 
-
 - (BOOL)gj_aLRatio {
     return [objc_getAssociatedObject(self, _cmd) boolValue];
 }
@@ -63,12 +69,16 @@ void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelector) {
         for (NSLayoutConstraint * constraint in [self.gj_constraints allObjects]) {
             if (!constraint.gj_isRatio) {
                 constraint.gj_isRatio = YES;
-                constraint.constant *= GJ_Scale;
             }
         }
     }
 }
 
+/**
+ *  gj_constraints is a hash table that collect constraints himself
+ *
+ *  @return hash table, week array.
+ */
 - (NSHashTable *)gj_constraints {
     NSHashTable *array = objc_getAssociatedObject(self, _cmd);
     if (!array) {
@@ -91,7 +101,6 @@ void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelector) {
         if (firstItem.gj_aLRatio || secendItemRatio) {
             if (!constraint.gj_isRatio) {
                 constraint.gj_isRatio = YES;
-                constraint.constant *= GJ_Scale;
             }
         }
 
@@ -108,10 +117,8 @@ void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelector) {
         if (firstItem.gj_aLRatio) {
             if (!constraint.gj_isRatio) {
                 constraint.gj_isRatio = YES;
-                constraint.constant *= GJ_Scale;
             }
         }
-        
         [firstItem.gj_constraints addObject:constraint];
     }
     [self gj_AddConstraint:constraint];

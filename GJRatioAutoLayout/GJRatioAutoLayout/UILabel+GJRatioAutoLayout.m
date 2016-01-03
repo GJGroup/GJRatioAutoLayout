@@ -8,7 +8,7 @@
 
 #import "UILabel+GJRatioAutoLayout.h"
 #import "UIView+GJRatioAutoLayout.h"
-#import "GJRatioAutoLaoutDefine.h"
+#import "GJRatioAutoLayoutDefine.h"
 #import <objc/runtime.h>
 
 @interface UILabel (_GJRatioAutoLayoutStroge)

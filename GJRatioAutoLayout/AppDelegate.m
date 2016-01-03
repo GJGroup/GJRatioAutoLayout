@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "MainViewController.h"
+#import "GJRatioAutoLayout.h"
 
 @interface AppDelegate ()
 
@@ -17,10 +17,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    MainViewController *vc = [[MainViewController alloc]init];
-    [self.window setRootViewController:vc];
-    [self.window makeKeyAndVisible];
+    
+    [GJRatioAutoLayout startWithScreenSizeType:GJScreenSizeTypeiPhone4Or5];
+
     return YES;
 }
 

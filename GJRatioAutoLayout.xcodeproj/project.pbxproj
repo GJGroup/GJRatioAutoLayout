@@ -12,22 +12,28 @@
 		4210144E1C38508700ED3D2D /* icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4210144D1C38508700ED3D2D /* icon@3x.png */; };
 		421014551C38536900ED3D2D /* UILabel+GJRatioAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 421014521C38536900ED3D2D /* UILabel+GJRatioAutoLayout.m */; };
 		421014561C38536900ED3D2D /* UIView+GJRatioAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 421014541C38536900ED3D2D /* UIView+GJRatioAutoLayout.m */; };
+		421014591C38EC6C00ED3D2D /* GJRatioAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 421014581C38EC6C00ED3D2D /* GJRatioAutoLayout.m */; };
+		4210145E1C39199E00ED3D2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4210145C1C39199E00ED3D2D /* Main.storyboard */; };
+		421014621C39223400ED3D2D /* GJMasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421014611C39223400ED3D2D /* GJMasonryViewController.m */; };
 		42FF3E411C33775600045F36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FF3E401C33775600045F36 /* main.m */; };
 		42FF3E441C33775600045F36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FF3E431C33775600045F36 /* AppDelegate.m */; };
 		42FF3E4C1C33775600045F36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42FF3E4B1C33775600045F36 /* Assets.xcassets */; };
 		42FF3E4F1C33775600045F36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FF3E4D1C33775600045F36 /* LaunchScreen.storyboard */; };
-		42FF3E591C33777400045F36 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FF3E571C33777400045F36 /* MainViewController.m */; };
-		42FF3E5A1C33777400045F36 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42FF3E581C33777400045F36 /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4210144B1C36E3B400ED3D2D /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		4210144D1C38508700ED3D2D /* icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@3x.png"; sourceTree = "<group>"; };
-		421014501C38536900ED3D2D /* GJRatioAutoLaoutDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJRatioAutoLaoutDefine.h; sourceTree = "<group>"; };
+		421014501C38536900ED3D2D /* GJRatioAutoLayoutDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJRatioAutoLayoutDefine.h; sourceTree = "<group>"; };
 		421014511C38536900ED3D2D /* UILabel+GJRatioAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+GJRatioAutoLayout.h"; sourceTree = "<group>"; };
 		421014521C38536900ED3D2D /* UILabel+GJRatioAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+GJRatioAutoLayout.m"; sourceTree = "<group>"; };
 		421014531C38536900ED3D2D /* UIView+GJRatioAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GJRatioAutoLayout.h"; sourceTree = "<group>"; };
 		421014541C38536900ED3D2D /* UIView+GJRatioAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GJRatioAutoLayout.m"; sourceTree = "<group>"; };
+		421014571C38EC6C00ED3D2D /* GJRatioAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJRatioAutoLayout.h; sourceTree = "<group>"; };
+		421014581C38EC6C00ED3D2D /* GJRatioAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJRatioAutoLayout.m; sourceTree = "<group>"; };
+		4210145D1C39199E00ED3D2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		421014601C39223400ED3D2D /* GJMasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GJMasonryViewController.h; path = Demo/GJMasonryViewController.h; sourceTree = "<group>"; };
+		421014611C39223400ED3D2D /* GJMasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GJMasonryViewController.m; path = Demo/GJMasonryViewController.m; sourceTree = "<group>"; };
 		42FF3E3C1C33775600045F36 /* GJRatioAutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GJRatioAutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FF3E401C33775600045F36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		42FF3E421C33775600045F36 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -35,9 +41,6 @@
 		42FF3E4B1C33775600045F36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42FF3E4E1C33775600045F36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42FF3E501C33775600045F36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		42FF3E561C33777400045F36 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		42FF3E571C33777400045F36 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		42FF3E581C33777400045F36 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		6C9A4CAEB0FAD3AD182D30E9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F3E18C7A39361B6B7BF01C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		96CD80BDBD7D159E919DA01C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,13 +70,22 @@
 		4210144F1C38536900ED3D2D /* GJRatioAutoLayout */ = {
 			isa = PBXGroup;
 			children = (
-				421014501C38536900ED3D2D /* GJRatioAutoLaoutDefine.h */,
+				421014571C38EC6C00ED3D2D /* GJRatioAutoLayout.h */,
+				421014581C38EC6C00ED3D2D /* GJRatioAutoLayout.m */,
+				421014501C38536900ED3D2D /* GJRatioAutoLayoutDefine.h */,
 				421014511C38536900ED3D2D /* UILabel+GJRatioAutoLayout.h */,
 				421014521C38536900ED3D2D /* UILabel+GJRatioAutoLayout.m */,
 				421014531C38536900ED3D2D /* UIView+GJRatioAutoLayout.h */,
 				421014541C38536900ED3D2D /* UIView+GJRatioAutoLayout.m */,
 			);
 			path = GJRatioAutoLayout;
+			sourceTree = "<group>";
+		};
+		4210145F1C391A9800ED3D2D /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Demo;
 			sourceTree = "<group>";
 		};
 		42FF3E331C33775600045F36 = {
@@ -98,11 +110,12 @@
 			isa = PBXGroup;
 			children = (
 				4210144F1C38536900ED3D2D /* GJRatioAutoLayout */,
+				4210145F1C391A9800ED3D2D /* Demo */,
 				42FF3E421C33775600045F36 /* AppDelegate.h */,
 				42FF3E431C33775600045F36 /* AppDelegate.m */,
-				42FF3E561C33777400045F36 /* MainViewController.h */,
-				42FF3E571C33777400045F36 /* MainViewController.m */,
-				42FF3E581C33777400045F36 /* MainViewController.xib */,
+				421014601C39223400ED3D2D /* GJMasonryViewController.h */,
+				421014611C39223400ED3D2D /* GJMasonryViewController.m */,
+				4210145C1C39199E00ED3D2D /* Main.storyboard */,
 				4210144B1C36E3B400ED3D2D /* icon@2x.png */,
 				4210144D1C38508700ED3D2D /* icon@3x.png */,
 				42FF3E4B1C33775600045F36 /* Assets.xcassets */,
@@ -189,8 +202,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4210145E1C39199E00ED3D2D /* Main.storyboard in Resources */,
 				42FF3E4F1C33775600045F36 /* LaunchScreen.storyboard in Resources */,
-				42FF3E5A1C33777400045F36 /* MainViewController.xib in Resources */,
 				4210144E1C38508700ED3D2D /* icon@3x.png in Resources */,
 				4210144C1C36E3B400ED3D2D /* icon@2x.png in Resources */,
 				42FF3E4C1C33775600045F36 /* Assets.xcassets in Resources */,
@@ -254,15 +267,24 @@
 			files = (
 				421014561C38536900ED3D2D /* UIView+GJRatioAutoLayout.m in Sources */,
 				42FF3E441C33775600045F36 /* AppDelegate.m in Sources */,
-				42FF3E591C33777400045F36 /* MainViewController.m in Sources */,
+				421014621C39223400ED3D2D /* GJMasonryViewController.m in Sources */,
 				421014551C38536900ED3D2D /* UILabel+GJRatioAutoLayout.m in Sources */,
 				42FF3E411C33775600045F36 /* main.m in Sources */,
+				421014591C38EC6C00ED3D2D /* GJRatioAutoLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		4210145C1C39199E00ED3D2D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4210145D1C39199E00ED3D2D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		42FF3E4D1C33775600045F36 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -360,6 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GJRatioAutoLayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liligo.GJRatioAutoLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -372,6 +395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GJRatioAutoLayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liligo.GJRatioAutoLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
