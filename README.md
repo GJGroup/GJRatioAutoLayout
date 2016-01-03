@@ -21,7 +21,7 @@ you can use this code to set base screen:
  you can use Interface builder or Code to set scale start, ALRatio set On in IB and object's property of UIView aLRatio = YES.
 
  
- ##开始使用
+## 开始使用
 
 添加文件夹'GJRatioAutoLayout'到项目中，包含如下文件:
 
