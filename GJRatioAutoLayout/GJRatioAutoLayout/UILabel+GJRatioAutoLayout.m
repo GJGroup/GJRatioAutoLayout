@@ -83,7 +83,6 @@
 
 #pragma mark- private method
 - (void)resetFont {
-    
     if (self.gj_aLRatio || self.gj_fontRatio) {
         self.gj_originalFontSize = self.font.pointSize;
         CGFloat size = floorl(self.font.pointSize * GJ_Scale);
