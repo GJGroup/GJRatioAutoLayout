@@ -17,13 +17,11 @@
 
 @implementation UILabel (_GJRatioAutoLayoutStroge)
 
-- (void)setGj_originalFontSize:(CGFloat)originalFontSize
-{
+- (void)setGj_originalFontSize:(CGFloat)originalFontSize {
     objc_setAssociatedObject(self, @selector(gj_originalFontSize), @(originalFontSize), OBJC_ASSOCIATION_RETAIN);
 }
 
-- (CGFloat)gj_originalFontSize
-{
+- (CGFloat)gj_originalFontSize {
 #if CGFLOAT_IS_DOUBLE
     return [objc_getAssociatedObject(self, _cmd) doubleValue];
 #else
@@ -36,30 +34,42 @@
 @implementation UILabel (GJRatioAutoLayout)
 
 + (void)load {
-//    GJExchangeImplementations(self, @selector(setFont:), @selector(gj_setFont:));
+    GJExchangeImplementations(self, @selector(setPreferredMaxLayoutWidth:), @selector(gj_setPreferredMaxLayoutWidth:));
 }
 
-- (BOOL)gj_fontRatio
-{
+#pragma mark- font ratio scaled
+- (BOOL)gj_fontRatio {
     return [objc_getAssociatedObject(self, _cmd) boolValue];
 }
 
-- (void)setGj_fontRatio:(BOOL)fontRatio
-{
+- (void)setGj_fontRatio:(BOOL)fontRatio {
     objc_setAssociatedObject(self, @selector(gj_fontRatio), @(fontRatio), OBJC_ASSOCIATION_RETAIN);
-    
 }
 
-- (void)setFontRatio:(BOOL)fontRatio
-{
+- (void)setFontRatio:(BOOL)fontRatio {
     if (self.gj_fontRatio == fontRatio) return;
     self.gj_fontRatio = fontRatio;
     [self resetFont];
 }
 
+#pragma mark- aLRatio rewrite
 - (void)setALRatio:(BOOL)aLRatio {
+    if (self.gj_aLRatio == aLRatio) return;
     [super setALRatio:aLRatio];
+    //reset only when changed
     [self resetFont];
+    [self resetPreferredMaxLayoutWidth];
+}
+
+
+#pragma mark - preferredMaxLayoutWidth
+//scaled when user set by code.
+- (void)gj_setPreferredMaxLayoutWidth:(CGFloat)width {
+    CGFloat maxWidth = width;
+    if (self.gj_aLRatio && maxWidth > 0) {
+        maxWidth *= GJ_Scale;
+    }
+    [self gj_setPreferredMaxLayoutWidth:maxWidth];
 }
 
 //- (void)gj_setFont:(UIFont *)font {
@@ -71,6 +81,7 @@
 //    }
 //}
 
+#pragma mark- private method
 - (void)resetFont {
     
     if (self.gj_aLRatio || self.gj_fontRatio) {
@@ -81,6 +92,12 @@
     }
     else {
         self.font = [UIFont fontWithName:self.font.fontName size:self.gj_originalFontSize];
+    }
+}
+
+- (void)resetPreferredMaxLayoutWidth {
+    if (self.gj_aLRatio && self.preferredMaxLayoutWidth > 0) {
+        [self gj_setPreferredMaxLayoutWidth:self.preferredMaxLayoutWidth * GJ_Scale];
     }
 }
 

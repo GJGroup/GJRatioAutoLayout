@@ -10,6 +10,9 @@
 
 @interface UILabel (GJRatioAutoLayout)
 
+/**
+ *  only scale font size.
+ */
 @property (nonatomic, assign, getter=gj_fontRatio) IBInspectable BOOL fontRatio;
 
 @end
