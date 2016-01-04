@@ -35,12 +35,10 @@ we support Masonry and PureLayout:
 - (void)createSomeViews {
     UIImageView *codeImageView = [[UIImageView alloc]init];
     codeImageView.image = [UIImage imageNamed:@"icon"];
-    codeImageView.backgroundColor = [UIColor lightGrayColor];
     codeImageView.aLRatio = YES;
     [self.view addSubview:codeImageView];
     [codeImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view).offset(50);
-        make.top.equalTo(self.sbImageView.mas_bottom).offset(50);
+        make.left.top.equalTo(self.view).offset(50);
     }];
 }
 ```
