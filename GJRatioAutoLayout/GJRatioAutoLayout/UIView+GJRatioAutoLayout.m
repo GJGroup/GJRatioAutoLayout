@@ -21,7 +21,7 @@ void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelector) {
 @interface NSLayoutConstraint (_GJRatioAutoLayout)
 
 /**
- *  gj_isRatio mark the constant is origin or scaled, and set constant.
+ *  gj_isRatio mark the constant is origin or scaled.
  */
 @property (nonatomic, assign) BOOL gj_isRatio;
 
@@ -29,11 +29,20 @@ void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelector) {
 
 @implementation NSLayoutConstraint (_GJRatioAutoLayout)
 
++ (void)load {
+    GJExchangeImplementations(self, @selector(gj_constant), @selector(constant));
+}
+
+- (CGFloat)gj_constant {
+    CGFloat constant = [self gj_constant];
+    if (self.gj_isRatio) {
+        constant *= GJ_Scale;
+    }
+    return constant;
+}
+
 - (void)setGj_isRatio:(BOOL)gj_isRatio {
     if (self.gj_isRatio == gj_isRatio) return;
-    if (gj_isRatio) {
-        self.constant *= GJ_Scale;
-    }
     objc_setAssociatedObject(self, @selector(gj_isRatio), @(gj_isRatio), OBJC_ASSOCIATION_RETAIN);
 }
 
@@ -116,7 +125,11 @@ void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelector) {
         }
     }
     else if ([constraint isMemberOfClass:NSClassFromString(@"NSContentSizeLayoutConstraint")] &&
-             ![self isKindOfClass:[UILabel class]]) {
+             ![self isKindOfClass:[UILabel class]] &&
+             ![self isKindOfClass:[UISlider class]] &&
+             ![self isKindOfClass:[UISwitch class]] &&
+             ![self isKindOfClass:[UIActivityIndicatorView class]] &&
+             ![self isKindOfClass:[UIPageControl class]]) {
         UIView *firstItem = constraint.firstItem;
         if (firstItem.gj_aLRatio) {
             if (!constraint.gj_isRatio) {
