@@ -60,6 +60,9 @@ void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelector) {
     objc_setAssociatedObject(self, @selector(gj_aLRatio), @(aLRatio), OBJC_ASSOCIATION_RETAIN);
 }
 
+/**
+ *  set aLRatio
+ */
 - (void)setALRatio:(BOOL)aLRatio {
     if (self.gj_aLRatio == aLRatio) return;
     self.gj_aLRatio = aLRatio;
@@ -89,9 +92,10 @@ void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelector) {
 }
 
 - (void)gj_AddConstraint:(NSLayoutConstraint *)constraint {
-    
+
     if ([constraint isMemberOfClass:[NSLayoutConstraint class]] ||
-        [constraint isMemberOfClass:NSClassFromString(@"MASLayoutConstraint")]) {
+        [constraint isMemberOfClass:NSClassFromString(@"MASLayoutConstraint")] ||
+        [constraint isMemberOfClass:NSClassFromString(@"NSIBPrototypingLayoutConstraint")]) {
         
         UIView *firstItem = constraint.firstItem;
         UIView *secendItem = constraint.secondItem;
@@ -121,6 +125,7 @@ void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelector) {
         }
         [firstItem.gj_constraints addObject:constraint];
     }
+
     [self gj_AddConstraint:constraint];
 }
 
