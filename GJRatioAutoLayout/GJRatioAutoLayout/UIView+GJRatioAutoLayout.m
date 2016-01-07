@@ -131,46 +131,64 @@ void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelector) {
     return array;
 }
 
+
 - (void)gj_AddConstraint:(NSLayoutConstraint *)constraint {
+    
+    if ([constraint isMemberOfClass:NSClassFromString(@"NSContentSizeLayoutConstraint")] &&
+        ([self isKindOfClass:[UILabel class]] ||
+         [self isKindOfClass:[UISlider class]] ||
+         [self isKindOfClass:[UISwitch class]] ||
+         [self isKindOfClass:[UIActivityIndicatorView class]] ||
+         [self isKindOfClass:[UIPageControl class]] ||
+         ([self isKindOfClass:[UIProgressView class]] &&
+           constraint.firstAttribute == NSLayoutAttributeHeight))) {
+             [self gj_AddConstraint:constraint];
+        return;
+    }
 
     if ([constraint isMemberOfClass:[NSLayoutConstraint class]] ||
         [constraint isMemberOfClass:NSClassFromString(@"MASLayoutConstraint")] ||
-        [constraint isMemberOfClass:NSClassFromString(@"NSIBPrototypingLayoutConstraint")]) {
-        
-        UIView *firstItem = constraint.firstItem;
-        UIView *secendItem = constraint.secondItem;
-        
-        BOOL secendItemRatio = secendItem ? secendItem.gj_aLRatio : NO;
+        [constraint isMemberOfClass:NSClassFromString(@"NSIBPrototypingLayoutConstraint")] ||
+        [constraint isMemberOfClass:NSClassFromString(@"NSContentSizeLayoutConstraint")]) {
     
-        if (firstItem.gj_aLRatio || secendItemRatio) {
+        //如果两个item有一个open，则这个constraint也open
+        if ([self checkALRatioWithFirstItem:constraint.firstItem
+                                 secondItem:constraint.secondItem]) {
             if (!constraint.gj_isRatio) {
                 constraint.gj_isRatio = YES;
             }
         }
 
         //set item's constraints
-        [firstItem.gj_constraints addObject:constraint];
+        if (constraint.firstItem &&
+            [constraint.firstItem isKindOfClass:[UIView class]]) {
+            [((UIView *)constraint.firstItem).gj_constraints addObject:constraint];
+        }
         
-        if (secendItem) {
-            [secendItem.gj_constraints addObject:constraint];
+        if (constraint.secondItem &&
+            [constraint.secondItem isKindOfClass:[UIView class]]) {
+            [((UIView *)constraint.secondItem).gj_constraints addObject:constraint];
         }
     }
-    else if ([constraint isMemberOfClass:NSClassFromString(@"NSContentSizeLayoutConstraint")] &&
-             ![self isKindOfClass:[UILabel class]] &&
-             ![self isKindOfClass:[UISlider class]] &&
-             ![self isKindOfClass:[UISwitch class]] &&
-             ![self isKindOfClass:[UIActivityIndicatorView class]] &&
-             ![self isKindOfClass:[UIPageControl class]]) {
-        UIView *firstItem = constraint.firstItem;
-        if (firstItem.gj_aLRatio) {
-            if (!constraint.gj_isRatio) {
-                constraint.gj_isRatio = YES;
-            }
-        }
-        [firstItem.gj_constraints addObject:constraint];
-    }
-
+    
     [self gj_AddConstraint:constraint];
+}
+
+- (BOOL)checkALRatioWithFirstItem:(id)firstItem
+                       secondItem:(id)secondItem {
+    BOOL firstRatio = NO;
+    if (firstItem && [firstItem isKindOfClass:[UIView class]]) {
+        UIView *firstView = firstItem;
+        firstRatio = firstView.gj_aLRatio;
+    }
+    
+    BOOL secondRatio = NO;
+    if (secondItem && [secondItem isKindOfClass:[UIView class]]) {
+        UIView *secondView = secondItem;
+        secondRatio = secondView.gj_aLRatio;
+    }
+    
+    return firstRatio || secondRatio;
 }
 
 @end
