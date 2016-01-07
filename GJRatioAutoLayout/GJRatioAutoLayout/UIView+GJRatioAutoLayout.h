@@ -13,11 +13,6 @@ void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelector);
 @interface UIView (GJRatioAutoLayout)
 
 /**
- *  set scaled open for entire view.
- */
-@property (nonatomic, assign, getter=gj_aLRatioEntire) IBInspectable BOOL aLRatioEntire;
-
-/**
  *  set scaled open for view.
  */
 @property (nonatomic, assign, getter=gj_aLRatio) IBInspectable BOOL aLRatio;

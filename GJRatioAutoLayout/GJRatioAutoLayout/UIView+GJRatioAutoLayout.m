@@ -61,37 +61,6 @@ void GJExchangeImplementations(Class class, SEL newSelector, SEL oldSelector) {
     GJExchangeImplementations(self, @selector(addConstraint:), @selector(gj_AddConstraint:));
 }
 
-- (BOOL)gj_aLRatioEntire {
-    return [objc_getAssociatedObject(self, _cmd) boolValue];
-}
-
-- (void)setGj_aLRatioEntire:(BOOL)aLRatioEntire {
-    objc_setAssociatedObject(self, @selector(gj_aLRatioEntire), @(aLRatioEntire), OBJC_ASSOCIATION_RETAIN);
-}
-
-- (void)setALRatioEntire:(BOOL)aLRatioEntire {
-    if (self.gj_aLRatioEntire == aLRatioEntire) return;
-    self.gj_aLRatioEntire = aLRatioEntire;
-    
-    if (self.gj_aLRatioEntire) {
-        //set current view and all subviews constraint scaled.
-        [self scaledEntireView:self];
-    }
-}
-
-- (void)scaledEntireView:(UIView *)view {
-    
-    for (NSLayoutConstraint * constraint in [view.gj_constraints allObjects]) {
-        if (!constraint.gj_isRatio) {
-            constraint.gj_isRatio = YES;
-        }
-    }
-    
-    for (UIView *itemView in view.subviews) {
-        [self scaledEntireView:itemView];
-    }
-}
-
 - (BOOL)gj_aLRatio {
     return [objc_getAssociatedObject(self, _cmd) boolValue];
 }
