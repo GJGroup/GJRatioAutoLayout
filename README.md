@@ -82,4 +82,3 @@ we support Masonry and PureLayout:
 
 ## 注意！
 UIImageView和UILabel如果不设置宽高约束，会根据内容及字号进行拉伸。
-若UIImageView和UILabel进行leading约束，建议设置UIImageView的宽或高，否则UIImageView会被Label的约束所影响。
