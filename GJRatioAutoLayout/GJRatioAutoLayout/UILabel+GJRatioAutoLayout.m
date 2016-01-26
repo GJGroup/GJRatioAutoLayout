@@ -57,15 +57,6 @@
     [self gj_setPreferredMaxLayoutWidth:maxWidth];
 }
 
-//- (void)gj_setFont:(UIFont *)font {
-//    if (self.gj_aLRatio || self.gj_fontRatio) {
-//        self.gj_originalFontSize = self.font.pointSize;
-//        CGFloat size = floorl(self.font.pointSize * GJ_Scale);
-//        NSString *name = self.font.fontName;
-//       [self gj_setFont:[UIFont fontWithName:name size:size]];
-//    }
-//}
-
 #pragma mark- private method
 - (void)resetFont {
     if (self.gj_aLRatio) {
