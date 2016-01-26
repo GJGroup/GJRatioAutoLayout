@@ -122,7 +122,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fontRatio" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="aLRatio" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
@@ -216,7 +215,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="aLRatio" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Ao-4r-08u">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Ao-4r-08u">
                                 <rect key="frame" x="10" y="74" width="129" height="103"/>
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
