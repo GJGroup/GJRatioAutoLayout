@@ -33,8 +33,8 @@
 		421014571C38EC6C00ED3D2D /* GJRatioAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJRatioAutoLayout.h; sourceTree = "<group>"; };
 		421014581C38EC6C00ED3D2D /* GJRatioAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJRatioAutoLayout.m; sourceTree = "<group>"; };
 		4210145D1C39199E00ED3D2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		421014601C39223400ED3D2D /* GJMasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GJMasonryViewController.h; path = Demo/GJMasonryViewController.h; sourceTree = "<group>"; };
-		421014611C39223400ED3D2D /* GJMasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GJMasonryViewController.m; path = Demo/GJMasonryViewController.m; sourceTree = "<group>"; };
+		421014601C39223400ED3D2D /* GJMasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJMasonryViewController.h; sourceTree = "<group>"; };
+		421014611C39223400ED3D2D /* GJMasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJMasonryViewController.m; sourceTree = "<group>"; };
 		4261A9A21C3929710017CBD3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		42FF3E3C1C33775600045F36 /* GJRatioAutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GJRatioAutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FF3E401C33775600045F36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,6 +86,8 @@
 		4210145F1C391A9800ED3D2D /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				421014601C39223400ED3D2D /* GJMasonryViewController.h */,
+				421014611C39223400ED3D2D /* GJMasonryViewController.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -116,8 +118,6 @@
 				4210145F1C391A9800ED3D2D /* Demo */,
 				42FF3E421C33775600045F36 /* AppDelegate.h */,
 				42FF3E431C33775600045F36 /* AppDelegate.m */,
-				421014601C39223400ED3D2D /* GJMasonryViewController.h */,
-				421014611C39223400ED3D2D /* GJMasonryViewController.m */,
 				4210145C1C39199E00ED3D2D /* Main.storyboard */,
 				4210144B1C36E3B400ED3D2D /* icon@2x.png */,
 				4210144D1C38508700ED3D2D /* icon@3x.png */,

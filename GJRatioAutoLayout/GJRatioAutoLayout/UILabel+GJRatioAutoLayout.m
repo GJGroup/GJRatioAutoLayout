@@ -37,21 +37,6 @@
     GJExchangeImplementations(self, @selector(setPreferredMaxLayoutWidth:), @selector(gj_setPreferredMaxLayoutWidth:));
 }
 
-#pragma mark- font ratio scaled
-- (BOOL)gj_fontRatio {
-    return [objc_getAssociatedObject(self, _cmd) boolValue];
-}
-
-- (void)setGj_fontRatio:(BOOL)fontRatio {
-    objc_setAssociatedObject(self, @selector(gj_fontRatio), @(fontRatio), OBJC_ASSOCIATION_RETAIN);
-}
-
-- (void)setFontRatio:(BOOL)fontRatio {
-    if (self.gj_fontRatio == fontRatio) return;
-    self.gj_fontRatio = fontRatio;
-    [self resetFont];
-}
-
 #pragma mark- aLRatio rewrite
 - (void)setALRatio:(BOOL)aLRatio {
     if (self.gj_aLRatio == aLRatio) return;
@@ -83,7 +68,7 @@
 
 #pragma mark- private method
 - (void)resetFont {
-    if (self.gj_aLRatio || self.gj_fontRatio) {
+    if (self.gj_aLRatio) {
         self.gj_originalFontSize = self.font.pointSize;
         CGFloat size = floorl(self.font.pointSize * GJ_Scale);
         NSString *name = self.font.fontName;

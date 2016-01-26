@@ -10,9 +10,4 @@
 
 @interface UILabel (GJRatioAutoLayout)
 
-/**
- *  only scale font size, and widtd & height if you don't set width and height constraint.
- */
-@property (nonatomic, assign, getter=gj_fontRatio) IBInspectable BOOL fontRatio;
-
 @end
